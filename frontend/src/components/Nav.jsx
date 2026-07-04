@@ -1,17 +1,25 @@
 import { Link } from 'react-router-dom';
 
 function Nav() {
+  const linkStyle = {
+    fontFamily: "'IBM Plex Mono', monospace",
+    fontSize: '13px',
+    letterSpacing: '0.06em',
+    textTransform: 'uppercase',
+    color: 'var(--paper)',
+  };
+
   return (
     <nav style={{
       display: 'flex',
-      gap: '24px',
-      padding: '20px 40px',
-      borderBottom: '1px solid #ddd',
-      fontFamily: 'sans-serif'
+      gap: '32px',
+      padding: '24px 48px',
+      background: 'var(--ink)',
+      borderBottom: '1px solid rgba(201,154,59,0.25)',
     }}>
-      <Link to="/">Bio</Link>
-      <Link to="/expertise">Expertise</Link>
-      <Link to="/gallery">Gallery</Link>
+      <Link to="/" style={linkStyle}>Bio</Link>
+      <Link to="/expertise" style={linkStyle}>Expertise</Link>
+      <Link to="/gallery" style={linkStyle}>Gallery</Link>
     </nav>
   );
 }
