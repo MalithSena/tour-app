@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
+import { API_URL } from '../config';
 
 function Expertise() {
   const [destinations, setDestinations] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/destinations/')
+    fetch(`${API_URL}/api/destinations/`)
       .then((res) => res.json())
       .then((data) => {
         setDestinations(data);

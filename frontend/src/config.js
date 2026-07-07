@@ -1,0 +1,1 @@
+export const API_URL = 'https://malith2026.pythonanywhere.com';

@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
+import { API_URL } from '../config';
 
 function Seal() {
   const [photoUrl, setPhotoUrl] = useState(null);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/profile/')
+    fetch(`${API_URL}/api/profile/`)
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 0) {
