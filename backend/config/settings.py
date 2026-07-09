@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'destinations',
     'profile_info',
     'axes',
+    'crm',
 ]
 
 MIDDLEWARE = [
